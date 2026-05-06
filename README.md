@@ -6,12 +6,6 @@
 
 ## Description
 
-This is a single-person project.  You are allowed and encouraged to discuss the
-project with your classmates, but no sharing of the project source code and
-report. Please list your discussion peers, if any, in your report submission.
-One benefit of a dynamically scheduled processor is its ability to tolerate
-changes in latency or issue capability in out of order speculative processors.
-
 The purpose of this project is to evaluate this effect of different
 architecture parameters on a CPU design by simulating a modified (and
 simplified) version of the PowerPc 604 and 620 architectures. We will assume a
