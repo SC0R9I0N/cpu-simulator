@@ -1,0 +1,63 @@
+%All the registers have the initial value of 0.
+%memory initial content in the form of address, value.
+0, 400
+8, 300
+16, 200
+24, 100
+100, 1
+104, 2
+108, 3
+112, 4
+116, 5
+120, 1
+124, 2
+128, 3
+132, 4
+136, 1
+140, 1
+144, 1
+148, 1
+152, 1
+156, 1
+160, 1
+164, 1
+168, 1
+200, 1
+%%
+fld F1, 100(X0)             % F1 = 1
+fld F2, 104(X0)             % F2 = 2
+fld F3, 108(X0)             % F3 = 3
+fld F4, 112(X0)             % F4 = 4
+fld F21, 120(X0)            % F21 = 1
+fld F23, 128(X0)            % F23 = 3
+addi X1, X0, 24             % X1 = 24
+addi X4, X0, 24             % X4 = 24
+addi X2, X0, 124            % X2 = 124
+loop1: fadd F10, F1, F2     % loop1: F10 = F1 + F2 = 3
+fsub F11, F10, F3           % F11 = F10 - F3 = 0
+fmul F12, F11, F4           % F12 = F11 * F4 = 0
+fmul F13, F2, F3            % F13 = F2 * F3 = 6
+fdiv F14, F4, F2            % F14 = F4 / F2 = 2
+addi X1, X1, -8             % X1 -= 8
+addi X4, X0, 24             % X4 = 24
+fld F22, 0(X2)              % F22 = mem[X2]
+loop2: fld F20, 0(X1)       % loop2: F20 = mem[X1]
+fmul F20, F20, F21          % F20 = F20 * F21 = F20
+fadd F22, F20, F22          % F22 += F20
+fsd F22, 0(X2)              % mem[X2] = F22
+addi X4, X4, -8             % X4 -= 8
+bne X4, X0, loop2           % if (x4 != 0) goto loop2
+fadd F23, F23, F21          % F23 += F21
+fsub F23, F23, F21          % F23 -= F21
+addi X2, X2, -8             % X2 -= 8
+bne X1, X0, loop1           % if(X1 != 0) goto loop1
+fsd F10, 136(X0)
+fsd F11, 140(X0)
+fsd F12, 144(X0)
+fsd F13, 148(X0)
+fsd F14, 152(X0)
+fsd F20, 156(X0)
+fsd F21, 160(X0)
+fsd F22, 164(X0)
+fsd F23, 168(X0)
+% End result: mem[124] = 602, mem[116] = 905, mem[108] = 1203

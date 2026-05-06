@@ -1,0 +1,6 @@
+%%
+	  addi X1, X0, 10
+	  addi X2, X1, 20
+	  bne X2, X1, skip
+	  addi X2, X2, 20 
+skip: addi X2, X2, 10

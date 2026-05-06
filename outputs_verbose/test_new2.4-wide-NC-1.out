@@ -1,0 +1,1035 @@
+[Initial Memory State]
+Instruction Cache
+	0: addi X1, X0, 6
+	4: addi X2, X0, 4
+	8: addi X3, X0, 0
+	12: addi X4, X0, 0
+	16: add X3, X3, X1
+	20: addi X4, X4, 1
+	24: bne X4, X2, 16
+Data Cache
+	Address	Value
+
+[Simulation Results]
+Clock Cycle: 1
+ PC: 16 ================================================
+Fetch Queue
+	0: addi X1, X0, 6
+	4: addi X2, X0, 4
+	8: addi X3, X0, 0
+	12: addi X4, X0, 0
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU2   	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT1	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT2	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT3	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT4	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	0	TAIL:	0
+	ROB  BUSY  DEST  VALUE OP
+	0    false       0     nop 
+	1    false       0     nop 
+	2    false       0     nop 
+	3    false       0     nop 
+	4    false       0     nop 
+	5    false       0     nop 
+	6    false       0     nop 
+	7    false       0     nop 
+	8    false       0     nop 
+	9    false       0     nop 
+	10   false       0     nop 
+	11   false       0     nop 
+	12   false       0     nop 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+Clock Cycle: 2
+ PC: -1 ================================================
+Fetch Queue
+	16: add X3, X3, X1
+	20: addi X4, X4, 1
+	24: bne X4, X2, 16
+Instruction (Decode) Queue
+	addi $0, $ZERO, 6
+	addi $1, $ZERO, 4
+	addi $2, $ZERO, 0
+	addi $3, $ZERO, 0
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU2   	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT1	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT2	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT3	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT4	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	0	TAIL:	0
+	ROB  BUSY  DEST  VALUE OP
+	0    false       0     nop 
+	1    false       0     nop 
+	2    false       0     nop 
+	3    false       0     nop 
+	4    false       0     nop 
+	5    false       0     nop 
+	6    false       0     nop 
+	7    false       0     nop 
+	8    false       0     nop 
+	9    false       0     nop 
+	10   false       0     nop 
+	11   false       0     nop 
+	12   false       0     nop 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 0
+	X2 -> $1 = 0
+	X3 -> $2 = 0
+	X4 -> $3 = 0
+Clock Cycle: 3
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+	add  $4, $2, $0
+	addi $5, $3, 1
+	bne  $5, $1, 16
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU2   	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT1	true 	1               addi	$0  	$ZERO	$0  	0    
+	INT2	true 	-1              addi	$1  	$ZERO	$0  	1    
+	INT3	true 	-1              addi	$2  	$ZERO	$0  	2    
+	INT4	true 	-1              addi	$3  	$ZERO	$0  	3    
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	0	TAIL:	4
+	ROB  BUSY  DEST  VALUE OP
+	0    true  X1    0     addi
+	1    true  X2    0     addi
+	2    true  X3    0     addi
+	3    true  X4    0     addi
+	4    false       0     nop 
+	5    false       0     nop 
+	6    false       0     nop 
+	7    false       0     nop 
+	8    false       0     nop 
+	9    false       0     nop 
+	10   false       0     nop 
+	11   false       0     nop 
+	12   false       0     nop 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 0
+	X2 -> $1 = 0
+	X3 -> $4 = 0
+	X4 -> $5 = 0
+Clock Cycle: 4
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+	addi $5, $3, 1
+	bne  $5, $1, 16
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU2   	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT1	true 	-1              add 	$4  	$2  	$0  	4    
+	INT2	true 	1               addi	$1  	$ZERO	$0  	1    
+	INT3	true 	-1              addi	$2  	$ZERO	$0  	2    
+	INT4	true 	-1              addi	$3  	$ZERO	$0  	3    
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	1	TAIL:	5
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    true  X2    0     addi
+	2    true  X3    0     addi
+	3    true  X4    0     addi
+	4    true  X3    0     add 
+	5    false       0     nop 
+	6    false       0     nop 
+	7    false       0     nop 
+	8    false       0     nop 
+	9    false       0     nop 
+	10   false       0     nop 
+	11   false       0     nop 
+	12   false       0     nop 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 0
+	X3 -> $4 = 0
+	X4 -> $5 = 0
+Clock Cycle: 5
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	true 	-1              bne 	$0  	$5  	$1  	6    
+	BU2   	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT1	true 	-1              add 	$4  	$2  	$0  	4    
+	INT2	true 	-1              addi	$5  	$3  	$0  	5    
+	INT3	true 	1               addi	$2  	$ZERO	$0  	2    
+	INT4	true 	-1              addi	$3  	$ZERO	$0  	3    
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	2	TAIL:	7
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    true  X3    0     addi
+	3    true  X4    0     addi
+	4    true  X3    0     add 
+	5    true  X4    0     addi
+	6    true        0     bne 
+	7    false       0     nop 
+	8    false       0     nop 
+	9    false       0     nop 
+	10   false       0     nop 
+	11   false       0     nop 
+	12   false       0     nop 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $4 = 0
+	X4 -> $5 = 0
+Clock Cycle: 6
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	true 	-1              bne 	$0  	$5  	$1  	6    
+	BU2   	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT1	true 	1               add 	$4  	$2  	$0  	4    
+	INT2	true 	-1              addi	$5  	$3  	$0  	5    
+	INT3	false	-1              addi	$2  	$ZERO	$0  	2    
+	INT4	true 	-1              addi	$3  	$ZERO	$0  	3    
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	3	TAIL:	7
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    true  X4    0     addi
+	4    true  X3    0     add 
+	5    true  X4    0     addi
+	6    true        0     bne 
+	7    false       0     nop 
+	8    false       0     nop 
+	9    false       0     nop 
+	10   false       0     nop 
+	11   false       0     nop 
+	12   false       0     nop 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $4 = 0
+	X4 -> $5 = 0
+Clock Cycle: 7
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	true 	-1              bne 	$0  	$5  	$1  	6    
+	BU2   	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT1	false	-1              add 	$4  	$2  	$0  	4    
+	INT2	true 	-1              addi	$5  	$3  	$0  	5    
+	INT3	false	-1              addi	$2  	$ZERO	$0  	2    
+	INT4	true 	1               addi	$3  	$ZERO	$0  	3    
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	3	TAIL:	7
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    true  X4    0     addi
+	4    false X3    6     add 
+	5    true  X4    0     addi
+	6    true        0     bne 
+	7    false       0     nop 
+	8    false       0     nop 
+	9    false       0     nop 
+	10   false       0     nop 
+	11   false       0     nop 
+	12   false       0     nop 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $4 = 0
+	X4 -> $5 = 0
+Clock Cycle: 8
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	true 	-1              bne 	$0  	$5  	$1  	6    
+	BU2   	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT1	false	-1              add 	$4  	$2  	$0  	4    
+	INT2	true 	1               addi	$5  	$3  	$0  	5    
+	INT3	false	-1              addi	$2  	$ZERO	$0  	2    
+	INT4	false	-1              addi	$3  	$ZERO	$0  	3    
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	4	TAIL:	7
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    true  X4    0     addi
+	6    true        0     bne 
+	7    false       0     nop 
+	8    false       0     nop 
+	9    false       0     nop 
+	10   false       0     nop 
+	11   false       0     nop 
+	12   false       0     nop 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $4 = 0
+	X4 -> $5 = 0
+Clock Cycle: 9
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	true 	1               bne 	$0  	$5  	$1  	6    
+	BU2   	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT1	false	-1              add 	$4  	$2  	$0  	4    
+	INT2	false	-1              addi	$5  	$3  	$0  	5    
+	INT3	false	-1              addi	$2  	$ZERO	$0  	2    
+	INT4	false	-1              addi	$3  	$ZERO	$0  	3    
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	5	TAIL:	7
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    true        0     bne 
+	7    false       0     nop 
+	8    false       0     nop 
+	9    false       0     nop 
+	10   false       0     nop 
+	11   false       0     nop 
+	12   false       0     nop 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $4 = 6
+	X4 -> $5 = 0
+Clock Cycle: 10
+ PC: 16 ================================================
+Fetch Queue
+	16: add X3, X3, X1
+	20: addi X4, X4, 1
+	24: bne X4, X2, 16
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	false	-1              bne 	$0  	$5  	$1  	6    
+	BU2   	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT1	false	-1              add 	$4  	$2  	$0  	4    
+	INT2	false	-1              addi	$5  	$3  	$0  	5    
+	INT3	false	-1              addi	$2  	$ZERO	$0  	2    
+	INT4	false	-1              addi	$3  	$ZERO	$0  	3    
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	6	TAIL:	7
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    false       16    bne 
+	7    false       0     nop 
+	8    false       0     nop 
+	9    false       0     nop 
+	10   false       0     nop 
+	11   false       0     nop 
+	12   false       0     nop 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $4 = 6
+	X4 -> $5 = 1
+Clock Cycle: 11
+ PC: 16 ================================================
+Fetch Queue
+	16: add X3, X3, X1
+	20: addi X4, X4, 1
+	24: bne X4, X2, 16
+Instruction (Decode) Queue
+	add  $6, $4, $0
+	addi $7, $5, 1
+	bne  $7, $1, 16
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	false	-1              bne 	$0  	$5  	$1  	6    
+	BU2   	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT1	false	-1              add 	$4  	$2  	$0  	4    
+	INT2	false	-1              addi	$5  	$3  	$0  	5    
+	INT3	false	-1              addi	$2  	$ZERO	$0  	2    
+	INT4	false	-1              addi	$3  	$ZERO	$0  	3    
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	7	TAIL:	7
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    false       16    bne 
+	7    false       0     nop 
+	8    false       0     nop 
+	9    false       0     nop 
+	10   false       0     nop 
+	11   false       0     nop 
+	12   false       0     nop 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $6 = 0
+	X4 -> $7 = 0
+Clock Cycle: 12
+ PC: -1 ================================================
+Fetch Queue
+	16: add X3, X3, X1
+	20: addi X4, X4, 1
+	24: bne X4, X2, 16
+Instruction (Decode) Queue
+	add  $8, $6, $0
+	addi $9, $7, 1
+	bne  $9, $1, 16
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	true 	-1              bne 	$0  	$7  	$1  	9    
+	BU2   	false	-1              nop 	$0  	$0  	$0  	-1   
+	INT1	true 	1               add 	$6  	$4  	$0  	7    
+	INT2	true 	-1              addi	$7  	$5  	$0  	8    
+	INT3	false	-1              addi	$2  	$ZERO	$0  	2    
+	INT4	false	-1              addi	$3  	$ZERO	$0  	3    
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	7	TAIL:	10
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    false       16    bne 
+	7    true  X3    0     add 
+	8    true  X4    0     addi
+	9    true        0     bne 
+	10   false       0     nop 
+	11   false       0     nop 
+	12   false       0     nop 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $8 = 0
+	X4 -> $9 = 0
+Clock Cycle: 13
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+	add  $10, $8, $0
+	addi $11, $9, 1
+	bne  $11, $1, 16
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	true 	-1              bne 	$0  	$7  	$1  	9    
+	BU2   	true 	-1              bne 	$0  	$9  	$1  	12   
+	INT1	true 	-1              add 	$8  	$6  	$0  	10   
+	INT2	true 	1               addi	$7  	$5  	$0  	8    
+	INT3	true 	-1              addi	$9  	$7  	$0  	11   
+	INT4	false	-1              addi	$3  	$ZERO	$0  	3    
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	8	TAIL:	13
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    false       16    bne 
+	7    false X3    12    add 
+	8    true  X4    0     addi
+	9    true        0     bne 
+	10   true  X3    0     add 
+	11   true  X4    0     addi
+	12   true        0     bne 
+	13   false       0     nop 
+	14   false       0     nop 
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $10 = 0
+	X4 -> $11 = 0
+Clock Cycle: 14
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+	bne  $11, $1, 16
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	true 	1               bne 	$0  	$7  	$1  	9    
+	BU2   	true 	-1              bne 	$0  	$9  	$1  	12   
+	INT1	true 	1               add 	$8  	$6  	$0  	10   
+	INT2	true 	-1              add 	$10 	$8  	$0  	13   
+	INT3	true 	-1              addi	$9  	$7  	$0  	11   
+	INT4	true 	-1              addi	$11 	$9  	$0  	14   
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	9	TAIL:	15
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    false       16    bne 
+	7    false X3    12    add 
+	8    false X4    2     addi
+	9    true        0     bne 
+	10   true  X3    0     add 
+	11   true  X4    0     addi
+	12   true        0     bne 
+	13   true  X3    0     add 
+	14   true  X4    0     addi
+	15   false       0     nop 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $10 = 0
+	X4 -> $11 = 0
+Clock Cycle: 15
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	true 	-1              bne 	$0  	$11 	$1  	15   
+	BU2   	true 	-1              bne 	$0  	$9  	$1  	12   
+	INT1	false	-1              add 	$8  	$6  	$0  	10   
+	INT2	true 	1               add 	$10 	$8  	$0  	13   
+	INT3	true 	-1              addi	$9  	$7  	$0  	11   
+	INT4	true 	-1              addi	$11 	$9  	$0  	14   
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	10	TAIL:	0
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    false       16    bne 
+	7    false X3    12    add 
+	8    false X4    2     addi
+	9    false       16    bne 
+	10   false X3    18    add 
+	11   true  X4    0     addi
+	12   true        0     bne 
+	13   true  X3    0     add 
+	14   true  X4    0     addi
+	15   true        0     bne 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $10 = 0
+	X4 -> $11 = 0
+Clock Cycle: 16
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	true 	-1              bne 	$0  	$11 	$1  	15   
+	BU2   	true 	-1              bne 	$0  	$9  	$1  	12   
+	INT1	false	-1              add 	$8  	$6  	$0  	10   
+	INT2	false	-1              add 	$10 	$8  	$0  	13   
+	INT3	true 	1               addi	$9  	$7  	$0  	11   
+	INT4	true 	-1              addi	$11 	$9  	$0  	14   
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	11	TAIL:	0
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    false       16    bne 
+	7    false X3    12    add 
+	8    false X4    2     addi
+	9    false       16    bne 
+	10   false X3    18    add 
+	11   true  X4    0     addi
+	12   true        0     bne 
+	13   false X3    24    add 
+	14   true  X4    0     addi
+	15   true        0     bne 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $10 = 0
+	X4 -> $11 = 0
+Clock Cycle: 17
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	true 	-1              bne 	$0  	$11 	$1  	15   
+	BU2   	true 	1               bne 	$0  	$9  	$1  	12   
+	INT1	false	-1              add 	$8  	$6  	$0  	10   
+	INT2	false	-1              add 	$10 	$8  	$0  	13   
+	INT3	false	-1              addi	$9  	$7  	$0  	11   
+	INT4	true 	1               addi	$11 	$9  	$0  	14   
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	12	TAIL:	0
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    false       16    bne 
+	7    false X3    12    add 
+	8    false X4    2     addi
+	9    false       16    bne 
+	10   false X3    18    add 
+	11   false X4    3     addi
+	12   true        0     bne 
+	13   false X3    24    add 
+	14   true  X4    0     addi
+	15   true        0     bne 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $10 = 0
+	X4 -> $11 = 0
+Clock Cycle: 18
+ PC: -1 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	true 	1               bne 	$0  	$11 	$1  	15   
+	BU2   	false	-1              bne 	$0  	$9  	$1  	12   
+	INT1	false	-1              add 	$8  	$6  	$0  	10   
+	INT2	false	-1              add 	$10 	$8  	$0  	13   
+	INT3	false	-1              addi	$9  	$7  	$0  	11   
+	INT4	false	-1              addi	$11 	$9  	$0  	14   
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	13	TAIL:	0
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    false       16    bne 
+	7    false X3    12    add 
+	8    false X4    2     addi
+	9    false       16    bne 
+	10   false X3    18    add 
+	11   false X4    3     addi
+	12   false       16    bne 
+	13   false X3    24    add 
+	14   false X4    4     addi
+	15   true        0     bne 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $10 = 0
+	X4 -> $11 = 0
+Clock Cycle: 19
+ PC: 28 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	false	-1              bne 	$0  	$11 	$1  	15   
+	BU2   	false	-1              bne 	$0  	$9  	$1  	12   
+	INT1	false	-1              add 	$8  	$6  	$0  	10   
+	INT2	false	-1              add 	$10 	$8  	$0  	13   
+	INT3	false	-1              addi	$9  	$7  	$0  	11   
+	INT4	false	-1              addi	$11 	$9  	$0  	14   
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	14	TAIL:	0
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    false       16    bne 
+	7    false X3    12    add 
+	8    false X4    2     addi
+	9    false       16    bne 
+	10   false X3    18    add 
+	11   false X4    3     addi
+	12   false       16    bne 
+	13   false X3    24    add 
+	14   false X4    4     addi
+	15   false       28    bne 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $10 = 24
+	X4 -> $11 = 0
+Clock Cycle: 20
+ PC: 28 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	false	-1              bne 	$0  	$11 	$1  	15   
+	BU2   	false	-1              bne 	$0  	$9  	$1  	12   
+	INT1	false	-1              add 	$8  	$6  	$0  	10   
+	INT2	false	-1              add 	$10 	$8  	$0  	13   
+	INT3	false	-1              addi	$9  	$7  	$0  	11   
+	INT4	false	-1              addi	$11 	$9  	$0  	14   
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	15	TAIL:	0
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    false       16    bne 
+	7    false X3    12    add 
+	8    false X4    2     addi
+	9    false       16    bne 
+	10   false X3    18    add 
+	11   false X4    3     addi
+	12   false       16    bne 
+	13   false X3    24    add 
+	14   false X4    4     addi
+	15   false       28    bne 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $10 = 24
+	X4 -> $11 = 4
+Clock Cycle: 21
+ PC: 28 ================================================
+Fetch Queue
+Instruction (Decode) Queue
+Reservation Station
+	Type	Busy	Remaining CC	Op    	Dest	Src1	Src2	ROB Index
+	Load1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Load2	false	-1              nop 	$0  	$0  	$0  	-1   
+	BU1   	false	-1              bne 	$0  	$11 	$1  	15   
+	BU2   	false	-1              bne 	$0  	$9  	$1  	12   
+	INT1	false	-1              add 	$8  	$6  	$0  	10   
+	INT2	false	-1              add 	$10 	$8  	$0  	13   
+	INT3	false	-1              addi	$9  	$7  	$0  	11   
+	INT4	false	-1              addi	$11 	$9  	$0  	14   
+	FPadd1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPadd3	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult1	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPmult2	false	-1              nop 	$0  	$0  	$0  	-1   
+	FPDiv1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store1	false	-1              nop 	$0  	$0  	$0  	-1   
+	Store2	false	-1              nop 	$0  	$0  	$0  	-1   
+Reorder Buffer
+	HEAD:	0	TAIL:	0
+	ROB  BUSY  DEST  VALUE OP
+	0    false X1    6     addi
+	1    false X2    4     addi
+	2    false X3    0     addi
+	3    false X4    0     addi
+	4    false X3    6     add 
+	5    false X4    1     addi
+	6    false       16    bne 
+	7    false X3    12    add 
+	8    false X4    2     addi
+	9    false       16    bne 
+	10   false X3    18    add 
+	11   false X4    3     addi
+	12   false       16    bne 
+	13   false X3    24    add 
+	14   false X4    4     addi
+	15   false       28    bne 
+Register Mapping
+	X0 -> $ZERO = 0
+	X1 -> $0 = 6
+	X2 -> $1 = 4
+	X3 -> $10 = 24
+	X4 -> $11 = 4
+Simulation complete!
+Total CCs: 21
+RS Stalls: 2
+ROB Stalls: 0

@@ -1,0 +1,6 @@
+%%
+addi X1, X0, 5
+addi X2, X0, 0
+loop: add X2, X2, X1
+addi X1, X1, -1
+bne X1, X0, loop

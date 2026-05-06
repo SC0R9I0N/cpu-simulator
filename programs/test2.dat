@@ -1,0 +1,4 @@
+%%
+addi X1, X0, -20
+loop: addi X1, X1, 4
+bne X1, X0, loop

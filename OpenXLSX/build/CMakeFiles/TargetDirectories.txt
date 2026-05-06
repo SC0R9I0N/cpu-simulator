@@ -1,0 +1,7 @@
+/mnt/c/Users/garre/CLionProjects/cpu-simulator-SC0R9I0N/OpenXLSX/build/CMakeFiles/OpenXLSX.dir
+/mnt/c/Users/garre/CLionProjects/cpu-simulator-SC0R9I0N/OpenXLSX/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/garre/CLionProjects/cpu-simulator-SC0R9I0N/OpenXLSX/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/garre/CLionProjects/cpu-simulator-SC0R9I0N/OpenXLSX/build/CMakeFiles/list_install_components.dir
+/mnt/c/Users/garre/CLionProjects/cpu-simulator-SC0R9I0N/OpenXLSX/build/CMakeFiles/install.dir
+/mnt/c/Users/garre/CLionProjects/cpu-simulator-SC0R9I0N/OpenXLSX/build/CMakeFiles/install/local.dir
+/mnt/c/Users/garre/CLionProjects/cpu-simulator-SC0R9I0N/OpenXLSX/build/CMakeFiles/install/strip.dir

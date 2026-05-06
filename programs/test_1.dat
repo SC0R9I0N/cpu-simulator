@@ -1,0 +1,28 @@
+%All the registers have the initial value of 0.
+%memory initial content in the form of address, value.
+100, 1
+104, 2
+108, 3
+112, 4
+116, 5
+124, 1
+128, 2
+132, 3
+136, 4
+140, 5
+%%
+fld F1, 100(X0)
+fld F2, 104(X0)
+fld F3, 108(X0)
+fld F4, 112(X0)
+fld F5, 116(X0)
+fadd F6, F1, F2
+fadd F7, F3, F4
+fmul F8, F2, F3
+fsub F9, F6, F3
+fdiv F10, F4, F2
+fsd F6, 124(X0)
+fsd F7, 128(X0)
+fsd F8, 132(X0)
+fsd F9, 136(X0)
+fsd F10, 140(X0)
