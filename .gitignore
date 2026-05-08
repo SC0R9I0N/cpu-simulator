@@ -33,6 +33,10 @@ cmake-build-debug
 # Executables
 sim
 
+# Build directories
+obj/
+OpenXLSX/build/
+
 # Simulator output files
 outputs/*
 diffs/*
