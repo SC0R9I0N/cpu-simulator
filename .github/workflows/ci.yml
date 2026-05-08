@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Build and evaluate diffs
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cmake pkg-config libglib2.0-dev
+
+      - name: Prepare directories
+        run: mkdir -p obj outputs diffs
+
+      - name: Build simulator
+        run: make
+
+      - name: Run simulator suite
+        run: make run
+
+      - name: Summarize diff results
+        run: bash .github/scripts/report-diff-results.sh
+
+      - name: Upload outputs and diffs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-results
+          path: |
+            outputs
+            diffs
